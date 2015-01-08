@@ -10,7 +10,13 @@ import UIKit
 import Foundation
 
 
-class CrearCanalController: UIViewController{
+
+class CrearCanalController: UIViewController, CatCanalDelegate {
+    
+  
+    @IBOutlet weak var lbl_catName: UILabel!
+   
+    var CategoriaCanal = String()
 
     var canalCats = Dictionary<String, AnyObject>()
     var tableArray: [String] = Array()
@@ -18,13 +24,39 @@ class CrearCanalController: UIViewController{
     var tableDict = Dictionary<Int,String>() //Id, Nombre
     var SubCatTableDict = Dictionary<Int,String>() //Id, Nombre
     var mDic = NSMutableDictionary()
+   
+    let CategoriasCanalpopVC = vwpop_CategoriaCanal(nibName:"vwpop_CategoriaCanal", bundle:nil )
     
-    var CategoriaCanal = Int()
+    func modalDidFinish(controller: vwpop_CategoriaCanal, catid: String) {
+        CategoriaCanal = catid
+       // lbl_catName.text = catname
+        println(catid)
+        
+    }
     
     
-    @IBOutlet weak var catCanalTableView: UITableView!
-  
-    @IBOutlet weak var subCatCanalTableView: UITableView!
+    func didFinishCategoriasCanal(controller: CategoriasCanal) {
+        //self.CategoriaCanal = controller.returnValue
+    }
+    
+    
+    
+    
+    @IBAction func btn_categoria(sender: AnyObject) {
+        
+        CategoriasCanalpopVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+        presentViewController(CategoriasCanalpopVC, animated: true, completion:nil)
+        
+       /* let ccvc = CategoriasCanal(nibName:"CategoriasCanal", bundle: nil)
+        
+        ccvc.returnValue = self.CategoriaCanal
+        ccvc.delegate = self
+        
+        navigationController?.pushViewController(ccvc, animated: true)*/
+        
+        
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

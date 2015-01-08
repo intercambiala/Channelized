@@ -1,42 +1,44 @@
 //
-//  CategoriasCanales.swift
+//  vwpop_CategoriaCanal.swift
 //  Channelized
 //
-//  Created by Mauro Laurent on 1/6/15.
+//  Created by Mauro Laurent on 1/7/15.
 //  Copyright (c) 2015 Channelized. All rights reserved.
 //
 
-
 import UIKit
-import Foundation
 
-protocol CategoriaCanalDelegate{
-    func didFinishCategoriasCanal(controller:CategoriasCanal)
+protocol CatCanalDelegate{
+
+    func modalDidFinish(controller: vwpop_CategoriaCanal,
+        catid: String)
 }
 
-class CategoriasCanal: UIViewController{
+
+class vwpop_CategoriaCanal: UIViewController {
+    
+    var delegate:CatCanalDelegate! = nil
+
+    @IBOutlet weak var tbl_categorias: UITableView!
     
     var tableDict = Dictionary<Int,String>() //Id, Nombre
-    var returnValue = Int()
+
     
-    
-    @IBOutlet weak var catsCanalTV: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Crear Nuevo Canal"
-        
-        
         CatsCanal()
-        
+
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+
     func CatsCanal() {
         
         var server = BaseMethods.Server().Url
@@ -62,20 +64,16 @@ class CategoriasCanal: UIViewController{
             let obj = kk as NSDictionary
             
             for (key, value) in obj {
-                
-                
+             
                 var nombre:String = obj.valueForKey("Nombre") as String
-                
                 var idd:Int = obj.valueForKey("id") as Int
-                
-                
+              
                 tableDict[idd] = nombre
                 
             }
             
         }
     }
-    
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         return tableDict.count
@@ -92,27 +90,24 @@ class CategoriasCanal: UIViewController{
         
     }
     
-    var delegate:CategoriaCanalDelegate!=nil
+  
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         var ii = indexPath.row
-        returnValue = tableDict.keys.array[ii]
         
+        var catId:String! = String(tableDict.keys.array[ii])
+        let catNombre:String! = tableDict.values.array[ii]
         
-        NSOperationQueue.mainQueue().addOperationWithBlock {
-            self.performSegueWithIdentifier("seg_categoriaCanales", sender: self)
-        }
+        println(catId)
+        
+        delegate.modalDidFinish(self, catid: catId)
+        
+      //  delegate.modalDidFinish(self, catid: catId!)
+        
         
     }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "seg_categoriaCanales"{
-            let vc = segue.destinationViewController as CrearCanalController
-           // vc.CategoriaCanal = returnValue
-            
-        }
-    }
+
+
 
 }
