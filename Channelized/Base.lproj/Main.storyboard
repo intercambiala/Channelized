@@ -544,45 +544,41 @@
             </objects>
             <point key="canvasLocation" x="2424" y="-523.5"/>
         </scene>
-        <!--Canal Crear Controller-->
+        <!--Canal Crear-->
         <scene sceneID="vPN-Bo-ugc">
             <objects>
-                <viewController id="PNA-OE-tGY" customClass="CanalCrearController" customModule="Channelized" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PNA-OE-tGY" customClass="CanalCrear" customModule="Channelized" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nf7-Wh-e8S"/>
                         <viewControllerLayoutGuide type="bottom" id="c72-4w-4Ie"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Raf-lg-cld">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sba-5E-AVe">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dms-BB-33Y">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="87" width="509" height="168"/>
+                                    <rect key="frame" x="0.0" y="109" width="568" height="162"/>
                                 </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="PNA-OE-tGY" id="kwL-rp-pmn"/>
-                                    <outlet property="delegate" destination="PNA-OE-tGY" id="ruQ-Vo-ojT"/>
-                                </connections>
-                            </tableView>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="sba-5E-AVe"/>
+                                <exclude reference="Dms-BB-33Y"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="subviews">
-                                <include reference="sba-5E-AVe"/>
+                                <include reference="Dms-BB-33Y"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="tbl_categorias" destination="sba-5E-AVe" id="NhG-B9-m72"/>
+                        <outlet property="pck_categorias" destination="Dms-BB-33Y" id="9Qy-g1-AjT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPc-Wm-NT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
