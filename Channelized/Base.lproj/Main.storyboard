@@ -373,9 +373,6 @@
                                 <variation key="heightClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="416" y="94" width="96" height="30"/>
                                 </variation>
-                                <connections>
-                                    <segue destination="PNA-OE-tGY" kind="show" id="qtI-dU-aOS"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -416,13 +413,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPn-Qg-nzv">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Volver">
                                     <color key="titleColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="19" y="269" width="87" height="30"/>
+                                    <rect key="frame" x="16" y="269" width="87" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="hgC-1N-FHJ" kind="show" id="l8t-xi-GMv"/>
@@ -547,6 +544,7 @@
         <!--Canal Crear-->
         <scene sceneID="vPN-Bo-ugc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPc-Wm-NT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="PNA-OE-tGY" customClass="CanalCrear" customModule="Channelized" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nf7-Wh-e8S"/>
@@ -556,34 +554,124 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIY-dj-Fta">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Volver" image="round71.png">
+                                    <color key="titleColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="7" y="3" width="33" height="31"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT2-Qx-NGw">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Guardar">
+                                    <color key="titleColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="447" y="5" width="91" height="32"/>
+                                </variation>
+                                <connections>
+                                    <action selector="btn_guardarCanal:" destination="PNA-OE-tGY" eventType="touchUpInside" id="6Uz-SV-KnC"/>
+                                </connections>
+                            </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dms-BB-33Y">
                                 <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="109" width="568" height="162"/>
+                                    <rect key="frame" x="0.0" y="150" width="568" height="162"/>
                                 </variation>
                             </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del canal" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5YA-bR-gVF">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="91" y="36" width="387" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripcion" minimumFontSize="15" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="u9d-az-xp6">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="yes" keyboardType="alphabet"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="91" y="74" width="387" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solo adultos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3n3-KJ-SRu">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="379" y="119" width="99" height="21"/>
+                                </variation>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9gk-EX-J08">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="319" y="113" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIc-GL-ttj">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="140" y="120" width="86" height="21"/>
+                                </variation>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mcc-vK-rv8">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="91" y="114" width="51" height="31"/>
+                                </variation>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="QIY-dj-Fta"/>
+                                <exclude reference="AT2-Qx-NGw"/>
                                 <exclude reference="Dms-BB-33Y"/>
+                                <exclude reference="5YA-bR-gVF"/>
+                                <exclude reference="u9d-az-xp6"/>
+                                <exclude reference="3n3-KJ-SRu"/>
+                                <exclude reference="9gk-EX-J08"/>
+                                <exclude reference="kIc-GL-ttj"/>
+                                <exclude reference="mcc-vK-rv8"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="subviews">
+                                <include reference="QIY-dj-Fta"/>
+                                <include reference="AT2-Qx-NGw"/>
                                 <include reference="Dms-BB-33Y"/>
+                                <include reference="5YA-bR-gVF"/>
+                                <include reference="u9d-az-xp6"/>
+                                <include reference="3n3-KJ-SRu"/>
+                                <include reference="9gk-EX-J08"/>
+                                <include reference="kIc-GL-ttj"/>
+                                <include reference="mcc-vK-rv8"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="KdX-k4-JGV"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="pck_categorias" destination="Dms-BB-33Y" id="9Qy-g1-AjT"/>
+                        <outlet property="swt_adultos" destination="9gk-EX-J08" id="kk6-OX-1AN"/>
+                        <outlet property="swt_privado" destination="mcc-vK-rv8" id="jK9-sJ-V5I"/>
+                        <outlet property="txt_descripcion" destination="u9d-az-xp6" id="nCh-mR-eUg"/>
+                        <outlet property="txt_nombreCanal" destination="5YA-bR-gVF" id="Odf-Np-dOT"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pPc-Wm-NT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2201" y="180"/>
+            <point key="canvasLocation" x="3013" y="180"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="plr-i1-Ajt">

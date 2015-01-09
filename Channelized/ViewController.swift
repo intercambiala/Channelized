@@ -20,6 +20,8 @@ class BaseMethods {
         
     }
     
+    
+    
     class Usuario {
         
         var Id: Int! = 0
@@ -185,8 +187,16 @@ class ViewController: UIViewController {
     
     @IBAction func btn_login(sender: AnyObject) {
         
+        var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
+        actInd.center = self.view.center
+        actInd.hidesWhenStopped = true
+        actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        view.addSubview(actInd)
+        actInd.startAnimating()
         
         DoLogin()
+        
+        actInd.stopAnimating()
       
     }
 
@@ -218,6 +228,12 @@ class ViewController: UIViewController {
                         self.usuario.Apellido = dictionary["Apellido"] as String;
                         self.usuario.Email = dictionary["Email"] as String;
                         self.usuario.Id = dictionary["Id"] as Int;
+                        
+                        var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+                        
+                        defaults.setObject(self.usuario.Id, forKey: "lgdus_id")
+                        
+                        defaults.synchronize()
                         
                         
                         NSOperationQueue.mainQueue().addOperationWithBlock {

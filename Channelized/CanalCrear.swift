@@ -9,23 +9,79 @@
 import UIKit
 import Foundation
 
-class CanalCrear: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+class CanalCrear: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate
+{
+    
+    
+    
+    class Canal {
+        
+        var Nombre: String
+        var Id: Int?
+        var CanalHijos: [Canal] = []
+        func AddCanal(cCanal: Canal ) { self.CanalHijos.append(cCanal) }
+        var Padre: Int?
+        
+        init(nombre: String) { self.Nombre = nombre}
+        
+        // var Canales = NSDictionary()
+        //func AddCanal(cCanal: CatCanal, key:String) { self.Canales.setValue(cCanal, forKey: key)}
+        
+    }
 
     @IBOutlet weak var pck_categorias: UIPickerView!
+   
+    @IBOutlet weak var txt_nombreCanal: UITextField!
+    @IBOutlet weak var nav: UINavigationBar!
+    @IBOutlet weak var swt_privado: UISwitch!
+    @IBOutlet weak var swt_adultos: UISwitch!
+    @IBOutlet weak var txt_descripcion: UITextField!
     
+    @IBAction func btn_guardarCanal(sender: AnyObject) {
+        
+        let cat:Int = pck_categorias.selectedRowInComponent(1)
+        var sc:Int = listaCanales[cat].Id as Int!
+        
+        var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        
+        var ccanl = [
+             "Nombre": self.txt_nombreCanal.text!
+            ,"Descripcion": self.txt_descripcion.text!
+            ,"Adultos": Int(self.swt_privado.selected)
+            ,"Privado": Int(self.swt_privado.selected)
+            ,"Categoria": sc
+            ,"Creador": defaults.objectForKey("lgdus_id") as Int
+            
+        ]
+        
+        
+        var server = BaseMethods.Server().Url
+        
+        var urli = server + "canal/post"
+
+            BaseMethods.HTTPPostJSON(urli, jsonObj: ccanl ){ (data: String, error: String?) -> Void in
+                
+                
+                if (data != "") {
+                    
+                }
+                else {//Print error
+                }
+                
+                
+            }
+            
+        
+        
+        
+    }
     //MARK  -Outlets and properties
     var arrayCatsPadre:[String] = []
-    var arrayCatsHijas:[String] = []
+    var arrayCatsHijas: [String] = []
     var pickerData: [[String]] = []
     
-    
-    
-    
-  /*  let pickerData = [
-        ["10\"","14\"","18\"","24\""],
-        ["Cheese","Pepperoni","Sausage","Veggie","BBQ Chicken"]
-    ]*/
-    
+    var listaCanales = [Canal]()
+
     
     enum PickerComponent:Int{
         case size = 0
@@ -38,8 +94,18 @@ class CanalCrear: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
         let toppingComponent = PickerComponent.topping.rawValue
         let size = pickerData[sizeComponent][pck_categorias.selectedRowInComponent(sizeComponent)]
         let topping = pickerData[toppingComponent][pck_categorias.selectedRowInComponent(toppingComponent)]
-      //  myLabel.text =
-        println("Pizza: " + size + " " + topping)
+        
+        OverridePickerRows()
+        
+        
+        //This is where you fill the second picker
+
+    }
+    
+    func OverridePickerRows() {
+        
+        pck_categorias.reloadAllComponents()
+    
     }
     
     //MARK -Life Cycle
@@ -47,18 +113,32 @@ class CanalCrear: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
         super.viewDidLoad()
         
         CatsCanal()
-        
-        
-        
+  
         pck_categorias.delegate = self
         pck_categorias.dataSource = self
-        pck_categorias.selectRow(2, inComponent: PickerComponent.size.rawValue, animated: false)
+        pck_categorias.selectRow(0, inComponent: PickerComponent.size.rawValue, animated: false)
         
-        updateLabel()
+      
+
+        
+        
     }
+    
+    func GoBack(sender:UIBarButtonItem) {
+        
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    
+    }
+    
     //MARK -Delgates and DataSource
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        updateLabel()
+        if(component == 0 ) {
+            
+            ManageSecondPickerData(row)
+        
+        }
+       
+        pickerView.reloadComponent(1)
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return pickerData.count
@@ -70,6 +150,25 @@ class CanalCrear: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return pickerData[component][row]
+    }
+    
+    func ManageSecondPickerData(id:Int) {
+
+        pickerData = [[String]]()
+        arrayCatsHijas = [String]()
+        
+        
+        
+        var primerCanal:Canal = listaCanales[id]
+        for cc in primerCanal.CanalHijos {
+            
+            arrayCatsHijas.append(cc.Nombre)
+            
+        }
+        pickerData.append(arrayCatsPadre)
+        pickerData.append(arrayCatsHijas)
+        
+        OverridePickerRows()
     }
     
     func CatsCanal() {
@@ -95,16 +194,42 @@ class CanalCrear: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
             
             let obj = kk as NSDictionary
             
-            var nombre:String = obj.valueForKey("Nombre") as String
             
-            arrayCatsPadre.append(nombre)
+            var nom:String = obj.valueForKey("Nombre") as String
+            var cCanal = Canal(nombre: nom)
+                cCanal.Id = obj.valueForKey("id") as? Int
+            
+            var categoriasHijos:AnyObject? = obj.valueForKey("CategoriaHijos") as? [AnyObject]
+            var canArray = categoriasHijos as NSArray
+            
+            for hj in canArray {
+                
+                let hijo = hj as NSDictionary
+                
+                var nomHj:String = hijo.valueForKey("Nombre") as String
+                
+                var catHijo = Canal(nombre: nomHj)
+                    catHijo.Id = obj.valueForKey("id") as? Int
+                    catHijo.Padre = obj.valueForKey("Padre") as? Int
+                
+                cCanal.AddCanal(catHijo)
+            
+            }
+            
+            listaCanales.append(cCanal)
+         
+            arrayCatsPadre.append(cCanal.Nombre)
+          
             
         }
         
-        pickerData.append(arrayCatsPadre)
-        pickerData.append(arrayCatsPadre)
+        
+        ManageSecondPickerData(0)
+       
+        
     }
     
+
 }
 
 
