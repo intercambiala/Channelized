@@ -42,7 +42,7 @@ class RegistroController: UIViewController {
                     ]
         
 
-        var server = BaseMethods.Server().Url
+        var server = Server().Url
         
         var urli = server + "usuario/post"
         /*?" +
@@ -65,7 +65,7 @@ class RegistroController: UIViewController {
                 if (data != "") {
                     let dictionary = BaseMethods.JSONParseDictionary(data)
                     
-                    var usr = BaseMethods.Usuario()
+                    var usr = Usuario()
                     
                     usr.Username = dictionary["Username"] as String;
                     usr.Nombre = dictionary["Nombre"] as String;

@@ -14,20 +14,6 @@ class CanalCrear: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate
     
     
     
-    class Canal {
-        
-        var Nombre: String
-        var Id: Int?
-        var CanalHijos: [Canal] = []
-        func AddCanal(cCanal: Canal ) { self.CanalHijos.append(cCanal) }
-        var Padre: Int?
-        
-        init(nombre: String) { self.Nombre = nombre}
-        
-        // var Canales = NSDictionary()
-        //func AddCanal(cCanal: CatCanal, key:String) { self.Canales.setValue(cCanal, forKey: key)}
-        
-    }
 
     @IBOutlet weak var pck_categorias: UIPickerView!
    
@@ -55,7 +41,7 @@ class CanalCrear: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate
         ]
         
         
-        var server = BaseMethods.Server().Url
+        var server = Server().Url
         
         var urli = server + "canal/post"
 
@@ -63,6 +49,11 @@ class CanalCrear: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate
                 
                 
                 if (data != "") {
+                    
+                    
+                    NSOperationQueue.mainQueue().addOperationWithBlock {
+                        self.performSegueWithIdentifier("seg_canal_crear_to_index", sender: self)
+                    }
                     
                 }
                 else {//Print error
@@ -126,8 +117,11 @@ class CanalCrear: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate
     
     func GoBack(sender:UIBarButtonItem) {
         
-        self.navigationController?.popToRootViewControllerAnimated(true)
-    
+        NSOperationQueue.mainQueue().addOperationWithBlock {
+            self.performSegueWithIdentifier("seg_canal_crear_to_index", sender: self)
+        }
+        
+        
     }
     
     //MARK -Delgates and DataSource
@@ -173,7 +167,7 @@ class CanalCrear: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate
     
     func CatsCanal() {
         
-        var server = BaseMethods.Server().Url
+        var server = Server().Url
         var urli = server + "categoriacanal?padreid=null"
         
         var url:NSURL = NSURL(string:urli)!

@@ -14,34 +14,7 @@ class BaseMethods {
     
     //BASE CLASSES
     
-    class Server {
         
-        var Url:String = "http:/104.130.139.197:16570/api/"
-        
-    }
-    
-    
-    
-    class Usuario {
-        
-        var Id: Int! = 0
-        var Username: String! = ""
-        var Nombre: String! = ""
-        var Apellido: String! = ""
-        var Email: String! = ""
-        var Password: String! = ""
-
-        
-        
-    }
-    
-    class CategoriaCanal {
-    
-        var Id: Int? = 0
-        var Nombre: String = ""
-        var Padre: Int? = 0
-    }
-    
     //END BASE CLASSES
     
     
@@ -176,7 +149,7 @@ class BaseMethods {
 class ViewController: UIViewController {
     
     
-    var usuario = BaseMethods.Usuario()
+    var usuario = Usuario()
     
     @IBOutlet weak var txt_usuario: UITextField!
     
@@ -204,7 +177,7 @@ class ViewController: UIViewController {
         
         var user = txt_usuario.text
         var pass = txt_password.text
-        var server = BaseMethods.Server().Url
+        var server = Server().Url
         
         var urli = server + "usuario/get?user=" + user + "&pass=" + pass
         

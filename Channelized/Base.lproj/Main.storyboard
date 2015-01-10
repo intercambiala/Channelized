@@ -320,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AFv-CZ-deh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1596" y="853.5"/>
+            <point key="canvasLocation" x="1418" y="934.5"/>
         </scene>
         <!--Canales-->
         <scene sceneID="mYO-sW-qDA">
@@ -337,42 +337,52 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="VBR-9j-l0B">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="11" width="50" height="50"/>
+                                    <rect key="frame" x="8" y="14" width="41" height="41"/>
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channelized TV" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA5-MD-0SZ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.65217391300000005" green="0.65217391300000005" blue="0.65217391300000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="74" y="17" width="290" height="37"/>
+                                    <rect key="frame" x="60" y="4" width="290" height="37"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZO-DL-OY3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.4163592078870289" green="0.70110818614130432" blue="0.19785157650453106" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="tintColor" red="0.088718947161049222" green="1" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Crear canal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <color key="tintColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="add133.png"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="425" y="20" width="103" height="34"/>
+                                    <rect key="frame" x="449" y="22" width="31" height="31"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="fNy-Eq-DLn" kind="presentation" id="drL-LC-jvb"/>
+                                    <segue destination="PNA-OE-tGY" kind="show" id="kP3-Hg-Q3c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlF-cA-0wb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canales" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upG-SW-DXY">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="59" y="26" width="290" height="37"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H20-S4-DuW">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Crear Canal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="radio57.png">
+                                    <color key="titleColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="416" y="94" width="96" height="30"/>
+                                    <rect key="frame" x="510" y="23" width="30" height="30"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="Rpa-Kh-w4r" kind="show" id="Nr5-ey-nmc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -381,7 +391,8 @@
                                 <exclude reference="VBR-9j-l0B"/>
                                 <exclude reference="ZA5-MD-0SZ"/>
                                 <exclude reference="KZO-DL-OY3"/>
-                                <exclude reference="DlF-cA-0wb"/>
+                                <exclude reference="upG-SW-DXY"/>
+                                <exclude reference="H20-S4-DuW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -389,7 +400,8 @@
                                 <include reference="VBR-9j-l0B"/>
                                 <include reference="ZA5-MD-0SZ"/>
                                 <include reference="KZO-DL-OY3"/>
-                                <include reference="DlF-cA-0wb"/>
+                                <include reference="upG-SW-DXY"/>
+                                <include reference="H20-S4-DuW"/>
                             </mask>
                         </variation>
                     </view>
@@ -397,7 +409,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBH-Jb-N5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644" y="-523.5"/>
+            <point key="canvasLocation" x="1606" y="-759"/>
+        </scene>
+        <!--Mis Canales-->
+        <scene sceneID="Rb6-35-6ld">
+            <objects>
+                <viewController title="Mis Canales" id="Rpa-Kh-w4r" customClass="MisCanalesController" customModule="Channelized" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bip-TR-TFH"/>
+                        <viewControllerLayoutGuide type="bottom" id="9O0-DG-Qhx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VNU-rW-BTX">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ljb-3Y-MNk">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="10" width="41" height="41"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channelized TV" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw7-1p-2iz">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.65217391300000005" green="0.65217391300000005" blue="0.65217391300000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="65" y="0.0" width="290" height="37"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mis Canales" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpU-1j-xht">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="64" y="23" width="290" height="37"/>
+                                </variation>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Y36-ez-CIh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="81" width="568" height="184"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rpa-Kh-w4r" id="CbR-hK-8hC"/>
+                                    <outlet property="delegate" destination="Rpa-Kh-w4r" id="MKt-uh-XXX"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oP1-Hv-Hys">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="tintColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="play101.png"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="112" y="273" width="27" height="27"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="6xB-HF-roU" kind="show" id="6cq-Q6-bcf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lista de reproduccion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DT-uA-UyG">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                <color key="textColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="79" y="299" width="93" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ljb-3Y-MNk"/>
+                                <exclude reference="Gw7-1p-2iz"/>
+                                <exclude reference="NpU-1j-xht"/>
+                                <exclude reference="Y36-ez-CIh"/>
+                                <exclude reference="oP1-Hv-Hys"/>
+                                <exclude reference="3DT-uA-UyG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="ljb-3Y-MNk"/>
+                                <include reference="Gw7-1p-2iz"/>
+                                <include reference="NpU-1j-xht"/>
+                                <include reference="Y36-ez-CIh"/>
+                                <include reference="oP1-Hv-Hys"/>
+                                <include reference="3DT-uA-UyG"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tbl_miscanales" destination="Y36-ez-CIh" id="k3s-pq-gNQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qkp-0z-6t5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2297" y="-823.5"/>
         </scene>
         <!--Crear Canal-->
         <scene sceneID="94n-LM-8Mt">
@@ -421,9 +533,6 @@
                                 <variation key="heightClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="269" width="87" height="30"/>
                                 </variation>
-                                <connections>
-                                    <segue destination="hgC-1N-FHJ" kind="show" id="l8t-xi-GMv"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="round71.png" translatesAutoresizingMaskIntoConstraints="NO" id="Evm-t8-wHY">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -539,12 +648,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FJ-jY-Fol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2424" y="-523.5"/>
+            <point key="canvasLocation" x="2509" y="-81"/>
         </scene>
         <!--Canal Crear-->
         <scene sceneID="vPN-Bo-ugc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pPc-Wm-NT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="PNA-OE-tGY" customClass="CanalCrear" customModule="Channelized" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nf7-Wh-e8S"/>
@@ -562,8 +670,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="7" y="3" width="33" height="31"/>
+                                    <rect key="frame" x="36" y="7" width="33" height="31"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="hgC-1N-FHJ" kind="show" id="cYP-8R-jDX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT2-Qx-NGw">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -572,7 +683,7 @@
                                     <color key="titleColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="447" y="5" width="91" height="32"/>
+                                    <rect key="frame" x="472" y="7" width="91" height="32"/>
                                 </variation>
                                 <connections>
                                     <action selector="btn_guardarCanal:" destination="PNA-OE-tGY" eventType="touchUpInside" id="6Uz-SV-KnC"/>
@@ -668,10 +779,12 @@
                         <outlet property="swt_privado" destination="mcc-vK-rv8" id="jK9-sJ-V5I"/>
                         <outlet property="txt_descripcion" destination="u9d-az-xp6" id="nCh-mR-eUg"/>
                         <outlet property="txt_nombreCanal" destination="5YA-bR-gVF" id="Odf-Np-dOT"/>
+                        <segue destination="hgC-1N-FHJ" kind="show" identifier="seg_canal_crear_to_index" id="Gl5-O0-YAV"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPc-Wm-NT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3013" y="180"/>
+            <point key="canvasLocation" x="1583" y="36"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="plr-i1-Ajt">
@@ -692,15 +805,185 @@
             </objects>
             <point key="canvasLocation" x="832" y="-81"/>
         </scene>
+        <!--Lista de reproduccion de canal-->
+        <scene sceneID="iur-ji-bEc">
+            <objects>
+                <viewController title="Lista de reproduccion de canal" id="6xB-HF-roU" customClass="ListaReproduccionController" customModule="Channelized" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p0Y-qZ-Bch"/>
+                        <viewControllerLayoutGuide type="bottom" id="kKn-Zf-Dvh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hce-9z-Wuy">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="4ea-b0-9RG">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="10" width="41" height="41"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channelized TV" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3Q-XR-S9f">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.65217391300000005" green="0.65217391300000005" blue="0.65217391300000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="65" y="0.0" width="290" height="37"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lista de reproduccion de canal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBd-xG-hQo">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="64" y="23" width="290" height="37"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjw-PK-d2L">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="tintColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="add133.png"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="112" y="273" width="27" height="27"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="fCr-vs-oAK" kind="show" id="uWx-Q4-Fxk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOO-3L-id1">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="79" y="299" width="93" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="4ea-b0-9RG"/>
+                                <exclude reference="I3Q-XR-S9f"/>
+                                <exclude reference="LBd-xG-hQo"/>
+                                <exclude reference="Zjw-PK-d2L"/>
+                                <exclude reference="TOO-3L-id1"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="4ea-b0-9RG"/>
+                                <include reference="I3Q-XR-S9f"/>
+                                <include reference="LBd-xG-hQo"/>
+                                <include reference="Zjw-PK-d2L"/>
+                                <include reference="TOO-3L-id1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P5o-Su-A7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2297" y="-1488"/>
+        </scene>
+        <!--Anadir video-->
+        <scene sceneID="UXn-GT-4bB">
+            <objects>
+                <viewController title="Anadir video" id="fCr-vs-oAK" customClass="AnadirVideoController" customModule="Channelized" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H1v-7h-6AB"/>
+                        <viewControllerLayoutGuide type="bottom" id="oE4-rV-KbN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n0c-tn-O5D">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="8WV-ly-Wqu">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="10" width="41" height="41"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channelized TV" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ck0-x7-qa7">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.65217391300000005" green="0.65217391300000005" blue="0.65217391300000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="65" y="2" width="290" height="37"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anadir video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPc-oI-y9v">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="64" y="24" width="290" height="37"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gF-Fi-SWa">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="tintColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="add133.png"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="249" y="97" width="71" height="71"/>
+                                </variation>
+                                <connections>
+                                    <action selector="btn_anadirVideo:" destination="fCr-vs-oAK" eventType="touchUpInside" id="Dfd-gH-Vxj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buscar archivo de video..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eag-wV-JaW">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.86415166440000002" green="0.06101479361" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="175" y="176" width="218" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8WV-ly-Wqu"/>
+                                <exclude reference="ck0-x7-qa7"/>
+                                <exclude reference="iPc-oI-y9v"/>
+                                <exclude reference="4gF-Fi-SWa"/>
+                                <exclude reference="Eag-wV-JaW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="8WV-ly-Wqu"/>
+                                <include reference="ck0-x7-qa7"/>
+                                <include reference="iPc-oI-y9v"/>
+                                <include reference="4gF-Fi-SWa"/>
+                                <include reference="Eag-wV-JaW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTS-ZW-m0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2972" y="-1488"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="add133.png" width="64" height="64"/>
         <image name="film25.png" width="32" height="32"/>
         <image name="icon.png" width="600" height="600"/>
         <image name="list82.png" width="32" height="32"/>
+        <image name="play101.png" width="64" height="52"/>
+        <image name="radio57.png" width="64" height="64"/>
         <image name="round71.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="MN6-pL-T4g"/>
-        <segue reference="l8t-xi-GMv"/>
+        <segue reference="Gl5-O0-YAV"/>
     </inferredMetricsTieBreakers>
 </document>

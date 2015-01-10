@@ -78,7 +78,7 @@ class CrearCanalController: UIViewController, CatCanalDelegate {
 
     func CatsCanal() {
         
-        var server = BaseMethods.Server().Url
+        var server = Server().Url
         var urli = server + "categoriacanal?padreid=null"
         
         var url:NSURL = NSURL(string:urli)!
@@ -156,7 +156,7 @@ class CrearCanalController: UIViewController, CatCanalDelegate {
     
     func SubCatsCanal(padreId:Int) {
         
-        var server = BaseMethods.Server().Url
+        var server = Server().Url
         var urli = server + "categoriacanal?padreid=" + String(padreId)
         
         var url:NSURL = NSURL(string:urli)!
