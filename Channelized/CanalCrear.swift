@@ -60,8 +60,8 @@ class CanalCrear: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate
                 }
                 
                 
-            }
-            
+        }
+        
         
         
         

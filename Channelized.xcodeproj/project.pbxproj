@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3415CE611A61CB740033893A /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 3415CE601A61CB740033893A /* folder.png */; };
+		3415CE631A61F0720033893A /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 3415CE621A61F0720033893A /* box.png */; };
 		342614721A5CE8B600B48EF5 /* CategoriasCanales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342614711A5CE8B600B48EF5 /* CategoriasCanales.swift */; };
 		344526121A5D9BAF0049BBA8 /* vwpop_CategoriaCanal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344526101A5D9BAF0049BBA8 /* vwpop_CategoriaCanal.swift */; };
 		344526131A5D9BAF0049BBA8 /* vwpop_CategoriaCanal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344526111A5D9BAF0049BBA8 /* vwpop_CategoriaCanal.xib */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3415CE601A61CB740033893A /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
+		3415CE621A61F0720033893A /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		342614711A5CE8B600B48EF5 /* CategoriasCanales.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriasCanales.swift; sourceTree = "<group>"; };
 		344526101A5D9BAF0049BBA8 /* vwpop_CategoriaCanal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vwpop_CategoriaCanal.swift; sourceTree = "<group>"; };
 		344526111A5D9BAF0049BBA8 /* vwpop_CategoriaCanal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwpop_CategoriaCanal.xib; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 		34E6F5F91A60A480003BF977 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3415CE621A61F0720033893A /* box.png */,
+				3415CE601A61CB740033893A /* folder.png */,
 				34E6F6031A60B384003BF977 /* play101.png */,
 				34E6F5FC1A60A4F8003BF977 /* add133.png */,
 				34E6F5FA1A60A4A2003BF977 /* radio57.png */,
@@ -314,9 +320,11 @@
 				34E6F5FB1A60A4A2003BF977 /* radio57.png in Resources */,
 				34E6F5FD1A60A4F8003BF977 /* add133.png in Resources */,
 				344FEEE51A4E1686000B425E /* Main.storyboard in Resources */,
+				3415CE611A61CB740033893A /* folder.png in Resources */,
 				34E6F6041A60B384003BF977 /* play101.png in Resources */,
 				344526131A5D9BAF0049BBA8 /* vwpop_CategoriaCanal.xib in Resources */,
 				344FEEEA1A4E1686000B425E /* LaunchScreen.xib in Resources */,
+				3415CE631A61F0720033893A /* box.png in Resources */,
 				346F3FD41A4F85BD005AC956 /* black302.png in Resources */,
 				346F3FD71A4F85BD005AC956 /* list82.png in Resources */,
 				344FEEE71A4E1686000B425E /* Images.xcassets in Resources */,

@@ -14,6 +14,12 @@ class ListaReproduccionController: UIViewController {
     
     @IBOutlet weak var tbl_videos: UITableView!
     
+    @IBAction func btn_anadirVideo(sender: UIButton) {
+        
+        presentViewController(FileBrowserController(), animated:true, completion:nil)
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -58,3 +58,4 @@ class CategoriaCanal {
     var Nombre: String = ""
     var Padre: Int? = 0
 }
+
