@@ -9,6 +9,7 @@
 import UIKit
 
 
+
 class VWFile {
     
      var Url:String = ""
@@ -119,12 +120,15 @@ class FileBrowserController: UIViewController, UICollectionViewDelegateFlowLayou
             
                 var error = NSErrorPointer()
                 
+                let manager = AFHTTPRequestOperationManager()
+                
+                
                 var url:NSURL = NSURL(string:urli)!
                 var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
-                request.addValue("video/mp4", forHTTPHeaderField: "Content-Type")
+                request.addValue("multipart/form-data", forHTTPHeaderField: "Content-Type")
                 request.addValue("application/json", forHTTPHeaderField: "Accept")
                 request.HTTPMethod = "POST"
-                request.HTTPBody = NSJSONSerialization.dataWithJSONObject(parameters, options: NSJSONWritingOptions.allZeros , error: error)
+                request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions.allZeros , error: error)
                 
             
                 
@@ -178,12 +182,8 @@ class FileBrowserController: UIViewController, UICollectionViewDelegateFlowLayou
                 break;
         
         }
-        
-        
-        
-
-    
     }
+    
     
     func collectionView(collectionview: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
